@@ -1,0 +1,587 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    background-color: rgb(15, 23, 42);
+}
+
+.mainContainer{
+    display: flex;
+    flex-direction: column;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    align-items: center;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: rgba(15, 23, 42, 0.8);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.leftNavBar{
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+}
+
+.rightNavBar{
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin-right: 30px;
+}
+
+.navBarOption{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.numOpt{
+    color: rgb(94 234 212);
+    font-family: "Press Start 2P", serif;
+    font-size: 11px;
+    transition: all ease 0.3s;
+}
+
+.numOpt:hover{
+    color: rgb(124, 255, 235);
+}
+
+.textOpt{
+    color: #94A3B8;
+    font-family: "Press Start 2P", serif;
+    font-size: 11px;
+    transition: all ease 0.3s;
+}
+
+.textOpt:hover{
+    color: #d6e1f1;
+}
+
+.resumeBtnCont{
+    display: flex;
+    align-items: center;
+}
+
+.btnResume{
+    color: rgb(94 234 212);
+    font-family: "Press Start 2P", serif;
+    font-size: 11px;
+    border: 1px solid rgb(94 234 212);
+    padding: 18px 10px;
+    background-color: transparent;
+    letter-spacing: 2.0px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all ease 0.3s;
+}
+
+.btnResume:hover{
+    background-color: rgb(94 234 212);
+    color: rgb(15, 23, 42);
+}
+
+a{
+    text-decoration: none;
+}
+a>svg{
+    color: rgb(94 234 212); 
+}
+
+.textContainer{
+    display: flex;
+    margin-left: 250px;
+    flex-direction: column;
+    padding-top: 80px;
+}
+
+.greetCont{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 15px;
+    color: rgb(94 234 212);
+    font-family: "Press Start 2P", serif;
+}
+
+.nameTitleCont{
+    display: flex;
+    align-items: center;
+    margin-top: 6px;
+}
+
+.nameTitleCont>h1{
+    color: #E2E8F0;
+    font-family: "Press Start 2P", serif;
+    font-weight: 600;
+    letter-spacing: 2px;
+    font-size: 43px;
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+.goalContainer{
+    display: flex;
+    align-items: center;
+    margin-top: 6px;
+}
+.goalContainer>h1{
+    color: #94A3B8;
+    font-family: "Inter", serif;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-top: 5px;
+    font-size: 36px;
+}
+
+.descriptionContainer{
+    max-width: 620px;
+    font-family: "Inter", serif;
+    color: #94A3B8;
+    font-size: 14px;
+    letter-spacing: 2px;
+    line-height: 2;
+    font-weight: 500;
+    padding-top: 25px;
+}
+
+.socialMediaCont{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding-top: 50px;
+}
+
+.socialMediaCont>span>svg{
+    height: 24px;
+    width: 24px;
+    color: #a8afb8;
+    transition: all ease 0.2s;
+}
+
+.socialMediaCont>span{
+    cursor: pointer;
+}
+
+.socialMediaCont>span>svg:hover{
+    color: #e3eaf3;
+}
+
+.socialIcon{
+    display: flex;
+    align-items: center;
+}
+
+.socialMediaCont>.socialIcon>a>span>svg{
+    height: 24px;
+    width: 24px;
+    color: #a8afb8;
+    transition: all ease 0.2s;
+}
+
+.socialMediaCont>.socialIcon>a>span>{
+    cursor: pointer;
+}
+
+.socialMediaCont>.socialIcon>a>span>svg:hover{
+    color: #e3eaf3;
+}
+
+.aboutMeCont{
+    display: flex;
+    margin-left: 250px;
+    padding-bottom: 90px;
+    max-width: 1200px;
+    width: 100%;
+    gap: 25px;
+}
+
+.textAboutMe{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 40px;
+}
+
+.textAboutMe{
+    font-size: 14px;
+    color: #8892B0;
+    font-family: "Inter", serif;
+    letter-spacing: 2px;
+    line-height: 2;
+}
+.linkedInImg{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.aboutMeTitle{
+    display: flex;
+    align-items: center;
+    max-width: 500px;
+    width: 100%;
+    gap: 10px;
+    margin-top: 150px;
+    margin-left: 250px;
+    padding-top: 50px;
+}
+
+.sectionNum{
+    font-family: "Press Start 2P", serif;
+    font-size: 20px;
+    color: rgb(94 234 212);
+}
+
+.sectionName{
+    font-family: "Inter", serif;
+    font-size: 32px;
+    color: #CCD6F5;
+    font-weight: 600;
+}
+
+.sectionNameLin {
+    content: "";
+    display: block;
+    position: relative;
+    width: 210px;
+    height: 1px;
+    margin-left: 20px;
+    background-color: #233554;
+}
+
+.techStackCont{
+    max-width: 420px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.arrowTextCont{
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.arrowIcon{
+    color: rgb(94 234 212);
+    font-size: 10px;
+}
+
+.techName{
+    font-family: "Inter", serif;
+    font-size: 13px;
+    color: #8892B0;
+    letter-spacing: 1px;
+}
+
+.svgLinkedInCont > img {
+    width: 300px;
+    height: 300px;
+    border-radius: 5px;
+    filter: invert(0%) sepia(85%) saturate(283%) hue-rotate(108deg) brightness(95%) contrast(92%);
+    transition: filter 0.3s ease;
+}
+
+.svgLinkedInCont > img:hover {
+    filter: none;
+}
+
+.expMeTitle{
+    display: flex;
+    align-items: center;
+    margin-left: 400px;
+    padding-top: 45px;
+}
+
+.experienceTextCont{
+    display: flex;
+    margin-left: 400px;
+    flex-direction: column;
+    padding-bottom: 120px;
+}
+
+.jobTitle{
+    font-size: 18px;
+    font-family: "Inter", serif;
+    color: #CCD6F6;
+    font-weight: 600;
+}
+
+.atJob{
+    font-size: 18px;
+    font-family: "Inter", serif;
+    color: rgb(94 234 212);
+    font-weight: 600; 
+}
+
+.jobTitleCont{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 34px;
+}
+
+.yearCont{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 20px;
+}
+
+.startDate, .finishDate{
+    font-size: 11px;
+    font-family: "Press Start 2P", serif;
+    color: #8892B0;
+    font-weight: 500; 
+}
+
+.arrowTextCont2{
+    display: flex;
+    gap: 7px;
+    margin-top: 25px;
+    max-width: 530px;
+    width: 100%;
+    letter-spacing: 3px;
+    line-height: 1.75;
+}
+
+.arrowIcon2{
+    color: rgb(94 234 212);
+    font-size: 11px;
+    margin-top: 3px;
+}
+
+.techName2{
+    font-family: "Inter", serif;
+    font-size: 14px;
+    color: #8892B0;
+    letter-spacing: 2px; 
+}
+
+.titleOtherProj{
+    font-weight: 800;
+    font-size: 23px;
+    font-family: "Inter", serif;
+    color: #CCD6F6;
+    letter-spacing: 1px;
+}
+
+.otherProjectTitle{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 35px;
+}
+
+.projectsContainer{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 225px;
+}
+
+.projectWrapper{
+    max-width: 1000px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.singleProjectBox{
+    max-width: 323px;
+    max-height: 304px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(17, 34, 64);
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.singleProjectBox:hover{
+    cursor: pointer;
+    transform: translateY(-5px);
+}
+
+.folderHeader{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 32px;
+}
+
+.folderHeader>svg{
+    height: 42px;
+    width: 42px;
+    color: rgb(94 234 212);
+    margin-left: 22px;
+}
+
+.folderHeader>a>svg{
+    height: 22px;
+    width: 22px;
+    color: rgb(168, 178, 209);
+    margin-right: 22px;
+    transition: all ease 0.2s;
+}
+
+.folderHeader>a>svg:hover{
+    color: rgb(94 234 212);
+}
+
+.projectNameContainer{
+    display: flex;
+    align-items: center;
+    max-width: 267px;
+    width: 100%;
+    margin-left: 22px;
+    margin-top: 30px;
+}
+
+.projectNameContainer>span{
+    font-weight: 800;
+    font-size: 17px;
+    font-family: "Inter", serif;
+    color: #CCD6F6;
+    letter-spacing: 1px;
+    transition: all ease 0.2s;
+}
+
+.singleProjectBox:hover .projectNameContainer>span{
+    color: rgb(94 234 212);
+}
+
+.projectDescContainer{
+    display: flex;
+    align-items: center;
+    max-width: 267px;
+    width: 100%;
+    margin-left: 22px;
+    margin-top: 15px;
+}
+
+.projectDescContainer>span{
+    color: #a8b2d1;
+    font-weight: 400;
+    font-size: 12px;
+    font-family: "Inter", serif;
+    letter-spacing: 1px;
+    line-height: 1.5;
+}
+
+.projectTechnologyCont{
+    display: flex;
+    align-items: center;
+    max-width: 267px;
+    width: 100%;
+    margin-left: 22px;
+    margin-top: 20px;
+    gap: 10px;
+    margin-bottom: 32px;
+    flex-wrap: wrap;
+}
+
+.projectTechnologyCont>span{
+    font-size: 7px;
+    font-family: "Press Start 2P", serif;
+    color: #8892B0;
+    letter-spacing: 2px;
+    font-weight: 500;
+}
+
+.contactCont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contactTitle{
+    font-weight: 500;
+    font-size: 12px;
+    font-family: "Press Start 2P", serif;
+    color:rgb(94 234 212);
+    letter-spacing: 1px;
+}
+
+.getTouch{
+    font-weight: 800;
+    font-size: 50px;
+    font-family: "Inter", serif;
+    color: #CCD6F6;
+    letter-spacing: 2px;
+    margin-top: 20px;
+}
+
+.contactTextContainer{
+    max-width: 600px;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.contactCurrentRole{
+    font-weight: 400;
+    font-size: 16px;
+    font-family: "Inter", serif;
+    color: #8892B0;
+    line-height: 1.5;
+}
+
+.footerSocials{
+    display: flex;
+    justify-content: center;
+}
+
+.helloBtnCont{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.helloBtn{
+    padding: 20px 28px;
+    border: 1px solid rgb(94 234 212);
+    background: transparent;
+    border-radius: 5px;
+    color: rgb(94 234 212);
+    font-weight: 500;
+    font-size: 12px;
+    font-family: "Press Start 2P", serif;
+    transition: all ease 0.3s;
+}
+
+.helloBtn:hover{
+    box-shadow: 5px 5px rgb(94 234 212);
+    transform: translate(-5px, -5px);
+    cursor: pointer;
+}
+
+.footerCredit{
+    display: flex;
+    justify-content: center;
+    margin-top: 190px;
+    padding-bottom: 50px;
+}
+
+.footerCredit>span{
+    font-weight: 400;
+    font-size: 12px;
+    font-family: "Press Start 2P", serif;
+    color: #A8B2D1;
+    line-height: 1.5;
+}
