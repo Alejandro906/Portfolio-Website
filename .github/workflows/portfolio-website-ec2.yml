@@ -8,7 +8,7 @@ on:
 jobs:
   deploy: 
     name: Deploy to EC2 main branch on push
-    runs-on: ubuntu-lastest
+    runs-on: ubuntu-latest
 
     steps:
       - name: Check the files
