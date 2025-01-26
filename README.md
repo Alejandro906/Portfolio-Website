@@ -1,8 +1,8 @@
 <div align="center">
 
-![GitHub repo size](https://img.shields.io/github/repo-size/pawantech12/portfolio-website)
-![GitHub stars](https://img.shields.io/github/stars/pawantech12/portfolio-website?style=social)
-![GitHub forks](https://img.shields.io/github/forks/pawantech12/portfolio-website?style=social)
+![GitHub repo size](https://img.shields.io/github/repo-size/Alejandro906/Portfolio-Website)
+![GitHub stars](https://img.shields.io/github/stars/Alejandro906/Portfolio-Website?style=social)
+![GitHub forks](https://img.shields.io/github/forks/Alejandro906/Portfolio-Website?style=social)
 
 <br />
 
