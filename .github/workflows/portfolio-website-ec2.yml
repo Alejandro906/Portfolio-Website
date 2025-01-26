@@ -1,37 +1,35 @@
-name : Push-to-EC2
-
+name: Push-to-EC2
 on:
   push:
-    branch:
-      -main
+    branches:
+      - main
 
 jobs:
-  deploy: 
+  deploy:
     name: Deploy to EC2 main branch on push
     runs-on: ubuntu-latest
-
     steps:
-      - name: Check the files
+      - name: Checkout code
         uses: actions/checkout@v3
-      
+
       - name: Deploy to Server
         uses: easingthemes/ssh-deploy@main
-        env: 
-          SSH_PRIVATE_KEY:${{secrets.EC2_SSH_KEY}}
-          REMOTE_HOST:${{secrets.HOST_DNS}}
-          REMOTE_USER:${{secrets.USERNAME}}
-          TARGET:${{secrets.TARGET_DIR}}
-      
-      - name: Execute remote ssh commands using ssh key
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.EC2_SSH_KEY }}
+          REMOTE_HOST: ${{ secrets.HOST_DNS }}
+          REMOTE_USER: ${{ secrets.USERNAME }}
+          TARGET: ${{ secrets.TARGET_DIR }}
+
+      - name: Execute remote commands
         uses: appleboy/ssh-action@master
-        with: 
-          host: ${{secrets.HOST_DNS}}
-          username: ${{secrets.USERNAME}}
-          key: ${{secrets.EC2_SSH_KEY}}
-          script: | 
-            sudo apt-get -y update
+        with:
+          host: ${{ secrets.HOST_DNS }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.EC2_SSH_KEY }}
+          script: |
+            sudo apt-get update
             sudo apt-get install -y apache2
             sudo systemctl start apache2
             sudo systemctl enable apache2
-            cd home
-            mv * /var/www/html
+            cd ~
+            sudo mv * /var/www/html
