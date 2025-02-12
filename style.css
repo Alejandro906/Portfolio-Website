@@ -295,6 +295,7 @@ a>svg{
     border-radius: 5px;
     filter: invert(0%) sepia(85%) saturate(283%) hue-rotate(108deg) brightness(95%) contrast(92%);
     transition: filter 0.3s ease;
+    object-fit: contain;
 }
 
 .svgLinkedInCont > img:hover {
